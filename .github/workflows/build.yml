@@ -1,5 +1,14 @@
-on: [push, pull_request, workflow_dispatch]
-
-jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+file_format: "1"
+id: klor
+name: KLOR
+type: shield
+url: https://github.com/GEIGEIGEIST/KLOR
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - encoder
+siblings:
+  - klor_left
+  - klor_right
