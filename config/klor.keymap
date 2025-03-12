@@ -18,12 +18,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/rgb.h>
 
 #define BASE   0
 #define LOWER  1
 #define RAISE  2
 #define ADJUST 3
-
 
 / {
     behaviors {
@@ -37,17 +37,21 @@
             bindings = <&kp>, <&kp>;
         };
 
+        rgb_ug: rgb_ug {
+            compatible = "zmk,behavior-rgb-underglow";
+            label = "RGB_UG";
+            #binding-cells = <1>;
+        };
     };
 
-     combos {
-            compatible = "zmk,combos";
-            combo_esc {
-                timeout-ms = <50>;
-                key-positions = <0 1>;
-                bindings = <&kp ESC>;
-            };
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
     };
-
 
 
         keymap {
@@ -60,20 +64,20 @@
 label= "BASE"                                                  ;
 // └───────────────────────────────────────────────────────────┘
 /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-             │    Q    │    W    │    F    │    P    │    G    │                    │    J    │    L    │    U    │    Y    │    ;    │   
+             │    Q    │    W    │    F    │    P    │    B    │                    │    J    │    L    │    U    │    Y    │    ;    │   
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │   TAB   │    A    │    R    │    S    │    T    │    D    │                    │    H    │    N    │    E    │    I    │    O    │    "    │
+   │   TAB   │    A    │    R    │    S    │    T    │    G    │                    │    M    │    N    │    E    │    I    │    O    │    "    │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │   DEL   │    Z    │    X    │    C    │    V    │    B    ││  MUTE  ││PLY/PSE ││    K    │    M    │    ,    │    .    │    /    │    \    │
+   │   DEL   │    Z    │    X    │    C    │    D    │    V    ││  MUTE  ││PLY/PSE ││    K    │    H    │    ,    │    .    │    /    │    \    │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                 │  CTRL   │  LOWER  │  SPACE  │   ALT   ││ CMD/WIN │  ENTER  │  RAISE  │  BSPCE  │  
+                                 │  DEL    │  BSPCE  │  LOWER  │   LOWER ││ RGB tog │  RAISE  │  SPACE  │  ENTER │  
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */ 
  bindings = <
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
-              &kp Q     &kp W     &kp F     &kp P     &kp G                          &kp J     &kp L     &kp U     &kp Y     &kp SEMI
-    &kp TAB   &kp A     &kp R     &kp S   &hm LSHFT T &kp D                          &kp H   &hm RSHFT N &kp E     &kp I     &kp O     &kp SQT
-    &kp DEL   &kp Z     &kp X     &kp C     &kp V     &kp B     &kp K_MUTE  &kp LC(UP)   &kp K     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp BSLH
-                                  &kp LCTRL &mo LOWER &kp SPACE &kp LALT   &kp LGUI  &kp RET   &mo RAISE &kp BSPC    
+              &kp Q     &kp W     &kp F     &kp P     &kp B                          &kp J     &kp L     &kp U     &kp Y     &kp SEMI
+    &kp TAB   &hm LGUI A     &hm LALT R     &hm LCTRL S   &hm LSHFT T   &kp G        &kp M   &hm RSHFT N  &hm RCTRL E     &hm RALT I     &hm RGUI O     &kp SQT
+    &kp DEL   &kp Z     &kp X     &kp C     &kp D     &kp V     &kp K_MUTE  &rgb_ug RGB_TOG   &kp K     &kp H     &kp COMMA &kp DOT   &kp FSLH  &kp BSLH
+                                  &kp DEL &kp BSPC &mo LOWER &mo LOWER   &kp LCTRL(UP) &mo RAISE   &kp SPACE &kp RET    
                         >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(LEFT) LC(RIGHT)>;
                 };
