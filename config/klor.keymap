@@ -40,7 +40,7 @@
         rgb_ug: rgb_ug {
             compatible = "zmk,behavior-rgb-underglow";
             label = "RGB_UG";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
         };
     };
 
