@@ -101,7 +101,7 @@ label= "LOWER"                                                 ;
     &trans    &trans    &kp PG_UP &kp CAPS  &kp PG_DN &kp LPAR  &trans     &trans    &kp RPAR  &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_MULTIPLY &trans
                                   &trans    &trans    &trans    &trans     &trans    &kp DELETE &kp KP_N0 &trans  
                         >;
-            s sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dep_kp LC(LEFT) LC(RIGHT)>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dep_kp LC(LEFT) LC(RIGHT)>;
                 };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
