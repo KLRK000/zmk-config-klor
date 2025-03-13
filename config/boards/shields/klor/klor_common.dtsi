@@ -40,12 +40,12 @@
 
     &pwm {
         status = "okay";
-        pwm_leds: pwm_leds {
+        pwm_leds: pwm_leds{
             compatible = "pwm-leds";
             label = "RGB_LEDS";
             status = "okay";
         };
-    };
+};
 
     &pwm_leds {
         rgb_led: rgb_led {
