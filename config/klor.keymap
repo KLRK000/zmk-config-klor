@@ -44,12 +44,6 @@
             label = "RGB_UG";
             #binding-cells = <2>;
         };
-
-        bl: backlight {
-            compatible = "zmk,behavior-backlight";
-            label = "BACKLIGHT";
-            #binding-cells = <2>;
-        };
     };
 
     combos {
