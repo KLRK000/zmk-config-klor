@@ -40,19 +40,18 @@
 
     &pwm {
         status = "okay";
-        pwm_leds: pwm_leds{
+        pwm_leds: pwm_leds
             compatible = "pwm-leds";
             label = "RGB_LEDS";
             status = "okay";
-        };
 };
 
     &pwm_leds {
-        rgb_led: rgb_led {
+        rgb_led: rgb_led 
             pwms = <&pwm0 0 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
             label = "RGB_LED";
             chain-length = <21>;
-        };
+        
     };
 
     &display {
