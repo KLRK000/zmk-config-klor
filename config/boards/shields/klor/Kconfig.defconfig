@@ -15,7 +15,6 @@ if SHIELD_KLOR_LEFT || SHIELD_KLOR_RIGHT
     config ZMK_SPLIT
         default y
 
-
 if ZMK_DISPLAY
 
     config I2C
@@ -24,9 +23,17 @@ if ZMK_DISPLAY
     config SSD1306
         default y
 
+config LV_USE_ANIMATION
+    bool
+    default y
+
+config ZMK_WIDGET_BONGO_CAT
+    bool
+    default y
+    select LV_USE_IMG
+    select LV_USE_ANIMATION
+    
 endif # ZMK_DISPLAY
-
-
 
 if LVGL
 
@@ -43,7 +50,9 @@ if LVGL
         default LV_COLOR_DEPTH_1
     endchoice
 
-endif # LVGL
+config LV_USE_LABEL
+    default y
 
+endif # LVGL
 
 endif # LEFT RIGHT
