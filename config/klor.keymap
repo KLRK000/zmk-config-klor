@@ -70,14 +70,14 @@ label= "BASE"                                                  ;
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
    │   DEL   │    Z    │    X    │    C    │    D    │    V    ││  MUTE  ││PLY/PSE ││    K    │    H    │    ,    │    .    │    /    │    \    │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                 │  DEL    │  BSPCE  │  LOWER  │   LOWER ││ RGB tog │  RAISE  │  SPACE  │  ENTER │  
+                                 │  DEL    │  BSPCE  │  LOWER  │   LOWER ││ RGB tog │  SPACE  │  RAISE  │  ENTER  │  
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */ 
  bindings = <
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
               &kp Q     &kp W     &kp F     &kp P     &kp B                          &kp J     &kp L     &kp U     &kp Y     &kp SEMI
-    &kp TAB   &kp A     &kp R     &kp S   &hm LSHFT T &kp G                          &kp H   &hm RSHFT N &kp E     &kp I     &kp O     &kp SQT
-    &kp DEL   &hm LGUI Z     &hm LALT X     &hm LCTRL C     &hm LSHFT D     &kp V     &kp K_MUTE     &kp LC(UP)    &hm RSHFT K     &hm RALT M     &hm RGUI COMMA &hm RGUI DOT   &kp FSLH  &kp BSLH
-                                  &kp LCTRL &mo LOWER &kp SPACE &kp LALT   &rgb_ug RGB_TOG  &kp RET   &mo RAISE &kp BSPC     
+    &kp TAB   &kp A     &kp R     &kp S   &hm LSHFT T &kp G                          &kp M   &hm RSHFT N &kp E     &kp I     &kp O     &kp SQT
+    &kp DEL   &hm LGUI Z     &hm LALT X     &hm LCTRL C     &hm LSHFT D     &kp V     &kp K_MUTE     &kp LC(UP)    &hm RSHFT K     &hm RALT H     &hm RGUI COMMA &hm RGUI DOT   &kp FSLH  &kp BSLH
+                                  &kp DEL &kp BSPC &mo LOWER &kp LALT   &rgb_ug RGB_TOG &mo RAISE &kp SPACE &kp RET     
                         >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(LEFT) LC(RIGHT)>;
                 };
@@ -127,8 +127,8 @@ label= "RAISE"                                                 ;
  bindings = <
  //╷         ╷       ╷       ╷       ╷       ╷              ╷         ╷╷         ╷         ╷                 ╷       ╷                ╷         ╷         ╷
               &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                &kp N6      &kp N7      &kp N8      &kp N9         &kp N0         
-    &trans    &kp EXCL  &kp AT  &kp HASH  &mt LSHFT DLLR  &kp PRCNT                 &kp CARET  &mt LSHFT AMPS     &kp ASTRK  &kp MINUS       &kp EQUAL    &kp BSLH  
-    &trans    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5         &trans     &trans      &kp F11    &trans       &trans     &kp UNDER          &kp PLUS      &trans
+    &rgb_ug RGB_ON    &kp EXCL  &kp AT  &kp HASH  &mt LSHFT DLLR  &kp PRCNT                 &kp CARET  &mt LSHFT AMPS     &kp ASTRK  &kp MINUS       &kp EQUAL    &kp BSLH  
+    &rgb_ug RGB_COLOR_HSB(128,100,100)    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5         &trans     &trans      &kp F11    &trans       &trans     &kp UNDER          &kp PLUS      &trans
                               &trans  &trans  &trans         &trans     &trans    &trans    &trans            &trans  
                         >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(LEFT) LC(RIGHT)>;
