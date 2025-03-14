@@ -156,8 +156,8 @@ label= "BASE"                                                  ;
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
               &kp Q     &kp W     &kp F     &kp P     &kp B                          &kp J     &kp L     &kp U     &kp Y     &kp SEMI
     &kp TAB   &kp A     &kp R     &kp S   &hm LSHFT T &kp G                          &kp M   &hm RSHFT N &kp E     &kp I     &kp O     &kp SQT
-    &kp DEL   &hm LGUI Z     &hm LALT X     &hm LCTRL C     &hm LSHFT D     &kp V     &kp K_MUTE     &kp LC(UP)    &hm RSHFT K     &hm RALT H     &hm RGUI COMMA &hm RGUI DOT   &kp FSLH  &kp BSLH
-                                  &kp DEL &kp BSPC &mo LOWER &kp LALT    &tog 4  &mo RAISE &kp SPACE &kp RET     
+    &kp DEL   &hm LGUI Z     &hm LALT X     &hm LCTRL C     &hm LSHFT D     &kp V     &tog 4     &kp LC(UP)    &hm RSHFT K     &hm RALT H     &hm RGUI COMMA &hm RGUI DOT   &kp FSLH  &kp BSLH
+                                  &kp DEL &kp BSPC &mo LOWER &kp LALT    &kp K_MUTE  &mo RAISE &kp SPACE &kp RET     
                         >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LC(LEFT) LC(RIGHT)>;
                 };
