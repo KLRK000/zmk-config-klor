@@ -29,7 +29,6 @@
             label = "LED Power Enable";
         };
     };
-};
 
 &gpio0 {
     status = "okay";
