@@ -20,12 +20,3 @@
 &left_encoder {
 	status = "okay";
 };
-
-    // Add this section to configure P0.13 for LEDs
-    leds {
-        compatible = "gpio-leds";
-        led_power: led_power {
-            gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>; // P0.13 as GPIO output
-            label = "LED Power Enable";
-        };
-    };
