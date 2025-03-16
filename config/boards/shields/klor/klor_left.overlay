@@ -7,22 +7,26 @@
 #include "klor.dtsi"
 
 &kscan0 {
-	col-gpios
-		= <&pro_micro 19 GPIO_ACTIVE_HIGH>
-		, <&pro_micro 18 GPIO_ACTIVE_HIGH>
-		, <&pro_micro 15 GPIO_ACTIVE_HIGH>
-		, <&pro_micro 14 GPIO_ACTIVE_HIGH>
-		, <&pro_micro 16 GPIO_ACTIVE_HIGH>
-		, <&pro_micro 10 GPIO_ACTIVE_HIGH>
-		;
+    col-gpios
+        = <&pro_micro 19 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 16 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 10 GPIO_ACTIVE_HIGH>
+        ;
 };
-leds {
+
+&left_encoder {
+    status = "okay";
+};
+
+/ {
+    leds {
         compatible = "gpio-leds";
         led_power: led_power {
             gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>; // P0.13 as GPIO output
             label = "LED Power Enable";
         };
     };
-&left_encoder {
-	status = "okay";
 };
