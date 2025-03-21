@@ -21,13 +21,17 @@
     status = "okay";
 };
 
-leds {
+/ {
+
+    leds {
         compatible = "pwm-leds";
         led_strip: led_strip {
             pwms = <&pwm0 0 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
             chain-length = <21>;
- };
+          };
     };
+};
+
 / {
     leds {
         compatible = "gpio-leds";
